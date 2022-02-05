@@ -1,0 +1,62 @@
+{
+    "components": [
+        {
+            "componentName": "div",
+            "text": "Fetch With Not Exist Component",
+            "fetch": {
+                "url": "https://jsonplaceholder.typicode.com/users/",
+                "each": "p[className=p,counter:$_i] > span",
+                "text": "<b>$_name</b>"
+            },
+            "props": {
+                "className": "list-group p-3",
+                "x": 5,
+                "y": 10
+            }
+        },
+        {
+            "componentName": "section",
+            "text": "Fetch With Exist Component",
+            "fetch": {
+                "url": "https://jsonplaceholder.typicode.com/users/",
+                "component": "fetchChild"
+            },
+            "props": {
+                "className": "list-group list-group-flush p-3"
+            }
+        },
+        {
+            "componentName": "hello",
+            "props": {
+                "className": "list-group list-group-flush p-3"
+            }
+        },
+        {
+            "componentName": "div",
+            "components": [
+                {
+                    "componentName": "h6",
+                    "text": "Hey this component here",
+                    "components": [
+                        {
+                            "componentName": "code",
+                            "text": "data/example.json",
+                            "props": {
+                                "className": "d-block"
+                            }
+                        }
+                    ]
+                }
+            ],
+            "props": {
+                "className": "p-3"
+            }
+        },
+        {
+            "componentName": "container",
+            "fetch": {
+                "url": "https://jsonplaceholder.typicode.com/users/"
+            }
+        }
+    ]
+}
